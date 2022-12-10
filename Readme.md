@@ -101,3 +101,18 @@ contractMonitor.initiateEventMonitoring((data)=>{ // call the initiateEventMonit
 ```
 
 And thats all, we will start receiving the event and the data sent out in those event seamlessly!!.
+
+The response will be an object in the format:
+
+```js
+{
+  eventName: 'DemoEvent1',
+  data: [
+    '0x69e666767Ba3a661369e1e2F572EdE7ADC926029',
+    '0x69e666767Ba3a661369e1e2F572EdE7ADC926029',
+    oldOwner: '0x69e666767Ba3a661369e1e2F572EdE7ADC926029',
+    newOwner: '0x69e666767Ba3a661369e1e2F572EdE7ADC926029'
+  ],
+  trxHash: '0x921931d8ca0e01fb4203ccf903149220e5e4bb27ce4844db28360219d57aa510'
+}
+```
