@@ -94,7 +94,10 @@ const ABI = [ // define the ABI
 	}
 ]
 const contractAddress = "0x609FE9E0317EBE4BFdcdb94b04eCd84ed7d3e8A5" // contract address
-const contractMonitor = new EventListner("wss://goerli.infura.io/ws/v3/<Project Id>",contractAddress,ABI) // initialise 
+// For monitoring all the events
+const contractMonitor = new EventListner("wss://goerli.infura.io/ws/v3/<Project Id>",contractAddress,ABI) // initialise
+// Or //
+// const contractMonitor = new EventListner("wss://goerli.infura.io/ws/v3/<Project Id>",contractAddress,ABI, ['DemoEvent1']) ----> For monitoring a specific event
 contractMonitor.initiateEventMonitoring((data)=>{ // call the initiateEventMonitoring to monitor the events
 	console.log(data) // log the data
 })
